@@ -26,7 +26,7 @@ CREATE TABLE tweets (
 );
 
 
--- create index 1 on users(username, password)
+-- create index one on users(username, password)
 -- create index rum_ind on tweets using rum(to_tsvector('english', text));
 -- create index 
 
