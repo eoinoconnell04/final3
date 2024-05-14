@@ -199,7 +199,7 @@ def check_creds(username, password):
         return False
 
     sql = sqlalchemy.sql.text('''
-        SELECT * FROM users
+        SELECT username FROM users
         WHERE username = :username
         AND password = :password;
         ''')

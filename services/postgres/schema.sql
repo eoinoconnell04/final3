@@ -25,4 +25,10 @@ CREATE TABLE tweets (
 	time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+-- create index 1 on users(username, password)
+-- create index rum_ind on tweets using rum(to_tsvector('english', text));
+-- create index 
+
+
 COMMIT;
