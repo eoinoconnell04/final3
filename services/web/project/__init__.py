@@ -6,7 +6,8 @@ from flask import (
     send_from_directory,
     request,
     render_template,
-    make_response
+    make_response,
+    redirect
 )
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
@@ -63,6 +64,10 @@ def login():
     username = request.form.get('username')
     password = request.form.get('password')
     approved = check_creds(username,password)
+
+    if approved:
+        return redirect('/')
+
     if username is None:
         return render_template('login.html', bad_creds=False, logged_in=False)
     else:
